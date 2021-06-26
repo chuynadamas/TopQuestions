@@ -1,2 +1,7 @@
 # TopQuestions
-- This is super simple example for network, UI, Models and iOS development in general.
+
+Illegal aliens have always been a problem in the United States. Ask any Indian.
+		-- Robert Orben
+
+Immigration is the sincerest form of flattery.
+		-- Jack Paar
