@@ -17,6 +17,13 @@ class TopQuestionsController: UITableViewController  {
         cell.quesitionTitleLabel.text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris elementum nulla sem, a tristique risus lacinia eget. Mauris placerat nulla in urna malesuada mollis. Mauris consequat scelerisque est non finibus. Ut purus eros, cursus quis posuere eget, malesuada ac neque"
         cell.questionTagsLabel.text = "objc, xcode, swift"
         cell.questionTimeStampLabel.text = "Asked on Sep 15th, 2021"
+        
+        cell.questionsUpsLabel.text = ""
+        cell.questionTimeStampLabel.text = ""
+        cell.questionsViewLabel.text = "162"
+        cell.questionsUpsLabel.text = "22"
+        cell.questionsViewLabel.text = "141K"
+        
         cell.accessoryType = .disclosureIndicator
         
         return cell

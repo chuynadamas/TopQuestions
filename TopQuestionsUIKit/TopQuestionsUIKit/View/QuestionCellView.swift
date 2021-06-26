@@ -11,6 +11,9 @@ class QuestionCellView: UITableViewCell {
     @IBOutlet weak var quesitionTitleLabel: UILabel!
     @IBOutlet weak var questionTagsLabel: UILabel!
     @IBOutlet weak var questionTimeStampLabel: UILabel!
+    @IBOutlet weak var questionsUpsLabel: UILabel!
+    @IBOutlet weak var questionsCommentsLabel: UILabel!
+    @IBOutlet weak var questionsViewLabel: UILabel!
     
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -20,4 +23,5 @@ class QuestionCellView: UITableViewCell {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
+    
 }

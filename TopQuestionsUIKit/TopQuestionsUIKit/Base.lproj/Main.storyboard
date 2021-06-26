@@ -50,25 +50,51 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3MB-i3-tut">
-                                            <rect key="frame" x="20" y="117.5" width="374" height="16"/>
+                                            <rect key="frame" x="20" y="104" width="374" height="16"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                             <color key="textColor" systemColor="opaqueSeparatorColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IQN-0i-Imv">
-                                            <rect key="frame" x="20" y="94" width="374" height="18"/>
+                                            <rect key="frame" x="20" y="80.5" width="374" height="18"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <color key="textColor" name="AccentColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="81" translatesAutoresizingMaskIntoConstraints="NO" id="27a-9r-AEQ">
+                                            <rect key="frame" x="20" y="130" width="271.5" height="18"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text=" 162" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cnU-2u-pr0">
+                                                    <rect key="frame" x="0.0" y="0.0" width="32.5" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" name="AccentColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="22" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9U2-a0-lK5">
+                                                    <rect key="frame" x="113.5" y="0.0" width="20.5" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" name="AccentColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="141K" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U2M-Qc-gHu">
+                                                    <rect key="frame" x="215" y="0.0" width="56.5" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" name="AccentColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="3MB-i3-tut" firstAttribute="top" secondItem="IQN-0i-Imv" secondAttribute="bottom" constant="5.5" id="8JB-PA-dBA"/>
+                                        <constraint firstAttribute="trailing" secondItem="27a-9r-AEQ" secondAttribute="trailing" constant="122.5" id="9xQ-9M-mTo"/>
+                                        <constraint firstAttribute="bottom" secondItem="27a-9r-AEQ" secondAttribute="bottom" constant="5" id="EfC-zY-n2Q"/>
                                         <constraint firstItem="zEq-KD-SEi" firstAttribute="top" secondItem="J3P-qn-XHp" secondAttribute="topMargin" id="M2u-9W-qu5"/>
                                         <constraint firstItem="IQN-0i-Imv" firstAttribute="leading" secondItem="J3P-qn-XHp" secondAttribute="leadingMargin" id="N4q-Jd-EqU"/>
                                         <constraint firstItem="3MB-i3-tut" firstAttribute="leading" secondItem="J3P-qn-XHp" secondAttribute="leadingMargin" id="PYh-VV-5EU"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="3MB-i3-tut" secondAttribute="bottom" constant="8.5" id="UD7-3a-67r"/>
                                         <constraint firstItem="IQN-0i-Imv" firstAttribute="trailing" secondItem="J3P-qn-XHp" secondAttribute="trailingMargin" id="Y3a-in-tPY"/>
+                                        <constraint firstItem="27a-9r-AEQ" firstAttribute="leading" secondItem="J3P-qn-XHp" secondAttribute="leading" constant="20" id="ZAv-t4-zO6"/>
+                                        <constraint firstItem="27a-9r-AEQ" firstAttribute="top" secondItem="3MB-i3-tut" secondAttribute="bottom" constant="10" id="a7Q-1L-4sB"/>
                                         <constraint firstItem="zEq-KD-SEi" firstAttribute="leading" secondItem="J3P-qn-XHp" secondAttribute="leadingMargin" id="dfj-wu-h2o"/>
                                         <constraint firstItem="3MB-i3-tut" firstAttribute="trailing" secondItem="J3P-qn-XHp" secondAttribute="trailingMargin" id="gmq-7n-pYD"/>
                                         <constraint firstItem="zEq-KD-SEi" firstAttribute="trailing" secondItem="J3P-qn-XHp" secondAttribute="trailingMargin" id="uWc-G2-CUk"/>
@@ -78,6 +104,9 @@
                                     <outlet property="quesitionTitleLabel" destination="zEq-KD-SEi" id="rRA-6d-xLf"/>
                                     <outlet property="questionTagsLabel" destination="IQN-0i-Imv" id="g0Y-yc-rer"/>
                                     <outlet property="questionTimeStampLabel" destination="3MB-i3-tut" id="DJJ-CF-Mjd"/>
+                                    <outlet property="questionsCommentsLabel" destination="9U2-a0-lK5" id="VXT-8W-fS2"/>
+                                    <outlet property="questionsUpsLabel" destination="cnU-2u-pr0" id="jJz-RQ-Lsh"/>
+                                    <outlet property="questionsViewLabel" destination="U2M-Qc-gHu" id="d0D-lq-wxb"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
