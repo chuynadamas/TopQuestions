@@ -16,7 +16,7 @@ class TopQuestionsController: UITableViewController  {
     private var dataModel = QuestionsDataModel()
     private var questions : [Question] = []
     
-    var subscriptions = Set<AnyCancellable>()
+    private var subscriptions = Set<AnyCancellable>()
     
     override func viewDidLoad() {
         super.viewDidLoad()
