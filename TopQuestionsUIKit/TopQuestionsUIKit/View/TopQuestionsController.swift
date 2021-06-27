@@ -21,9 +21,13 @@ class TopQuestionsController: UITableViewController  {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.tableFooterView = UIView()
+        title = "Top Questions"
         
+        setUp()
+    }
+    
+    func setUp() {
         dataModel.fetchTopQuestions()
-        
         dataModel.$questions.sink { [weak self] value in
             self?.questions = value
             self?.tableView.reloadData()
@@ -52,9 +56,10 @@ class TopQuestionsController: UITableViewController  {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == segueIdentifier {
-            if let destVC = segue.destination as? UINavigationController,
-               let targetController = destVC.topViewController as? DetailQuestionViewController {
-                targetController.title = "Detailed Question"
+            if let targetController = segue.destination as? DetailQuestionViewController {
+                if let index = self.tableView.indexPathForSelectedRow?.row {
+                    targetController.question = questions[index]
+                }
             }
         }
     }

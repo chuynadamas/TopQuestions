@@ -14,7 +14,12 @@ extension Int {
         let number = self > 1000
             ? NSNumber(value: Float(self) / 1000)
             : NSNumber(value: self)
-        return formatter.string(from: number)!
+        let strings = formatter.string(from: number)!.split(separator: ".")
+        if strings.count > 1 {
+            return strings[0]+"K"
+        } else {
+            return String(strings[0])
+        }
     }
 }
 

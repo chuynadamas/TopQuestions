@@ -27,8 +27,8 @@ class QuestionCellView: UITableViewCell {
         questionTitleLabel?.text = question.title
         questionTagsLabel?.text = question.tags.joined(separator: ", ")
         questionTimeStampLabel?.text = question.date.formatted
-        questionsUpsLabel?.text = "\(question.score.thousandsFormatting)"
-        questionsCommentsLabel?.text = "\(question.answerCount.thousandsFormatting)"
-        questionsViewLabel?.text = "\(question.viewCount.thousandsFormatting)"
+        questionsUpsLabel?.text = "🆙 \(question.score.thousandsFormatting)"
+        questionsCommentsLabel?.text = "💬 \(question.answerCount.thousandsFormatting)"
+        questionsViewLabel?.text = "👀 \(question.viewCount.thousandsFormatting)"
     }
 }
