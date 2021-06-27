@@ -61,23 +61,32 @@
                                             <color key="textColor" name="AccentColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="81" translatesAutoresizingMaskIntoConstraints="NO" id="27a-9r-AEQ">
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="27a-9r-AEQ">
                                             <rect key="frame" x="20" y="130" width="271.5" height="18"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text=" 162" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cnU-2u-pr0">
-                                                    <rect key="frame" x="0.0" y="0.0" width="32.5" height="18"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="61" height="18"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="RYL-WA-JZ3"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" name="AccentColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="22" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9U2-a0-lK5">
-                                                    <rect key="frame" x="113.5" y="0.0" width="20.5" height="18"/>
+                                                    <rect key="frame" x="86" y="0.0" width="60" height="18"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="B8f-Jn-eX2"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" name="AccentColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="141K" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U2M-Qc-gHu">
-                                                    <rect key="frame" x="215" y="0.0" width="56.5" height="18"/>
+                                                    <rect key="frame" x="171" y="0.0" width="100.5" height="18"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="Fzz-9C-Mdo"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" name="AccentColor"/>
                                                     <nil key="highlightedColor"/>
@@ -101,9 +110,9 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="quesitionTitleLabel" destination="zEq-KD-SEi" id="rRA-6d-xLf"/>
                                     <outlet property="questionTagsLabel" destination="IQN-0i-Imv" id="g0Y-yc-rer"/>
                                     <outlet property="questionTimeStampLabel" destination="3MB-i3-tut" id="DJJ-CF-Mjd"/>
+                                    <outlet property="questionTitleLabel" destination="zEq-KD-SEi" id="iEl-SJ-838"/>
                                     <outlet property="questionsCommentsLabel" destination="9U2-a0-lK5" id="VXT-8W-fS2"/>
                                     <outlet property="questionsUpsLabel" destination="cnU-2u-pr0" id="jJz-RQ-Lsh"/>
                                     <outlet property="questionsViewLabel" destination="U2M-Qc-gHu" id="d0D-lq-wxb"/>

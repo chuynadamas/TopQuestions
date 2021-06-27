@@ -6,31 +6,39 @@
 //
 
 import UIKit
+import Combine
 
 class TopQuestionsController: UITableViewController  {
     
-    let cellIdentifier = "questionCellView"
-    let segueIdentifier = "showQuestionDetail"
+    private let cellIdentifier = "questionCellView"
+    private let segueIdentifier = "showQuestionDetail"
+    
+    private var dataModel = QuestionsDataModel()
+    private var questions : [Question] = []
+    
+    var subscriptions = Set<AnyCancellable>()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        tableView.tableFooterView = UIView()
+        
+        dataModel.fetchTopQuestions()
+        
+        dataModel.$questions.sink { [weak self] value in
+            self?.questions = value
+            self?.tableView.reloadData()
+        }.store(in: &subscriptions)
+    }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! QuestionCellView
-        cell.quesitionTitleLabel.text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris elementum nulla sem, a tristique risus lacinia eget. Mauris placerat nulla in urna malesuada mollis. Mauris consequat scelerisque est non finibus. Ut purus eros, cursus quis posuere eget, malesuada ac neque"
-        cell.questionTagsLabel.text = "objc, xcode, swift"
-        cell.questionTimeStampLabel.text = "Asked on Sep 15th, 2021"
-        
-        cell.questionsUpsLabel.text = ""
-        cell.questionTimeStampLabel.text = ""
-        cell.questionsViewLabel.text = "162"
-        cell.questionsUpsLabel.text = "22"
-        cell.questionsViewLabel.text = "141K"
-        
         cell.accessoryType = .disclosureIndicator
-        
+        cell.update(with: questions[indexPath.row])
         return cell
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-      return 10
+        return questions.count
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
