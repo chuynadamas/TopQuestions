@@ -6,13 +6,16 @@
 //
 import Foundation
 
-class QuestionsDataModel: ObservableObject {
-    @Published private(set) var questions: [Question] = []
-    @Published private(set) var isLoading = false
+public class QuestionsDataModel: ObservableObject {
+    @Published public private(set) var questions: [Question] = []
+    @Published public private(set) var isLoading = false
     
     private var request: APIRequest<QuestionsResource>?
     
-    func fetchTopQuestions() {
+    public init (){
+    }
+    
+    public func fetchTopQuestions() {
         guard !isLoading else { return }
         isLoading = true
         let resource = QuestionsResource()

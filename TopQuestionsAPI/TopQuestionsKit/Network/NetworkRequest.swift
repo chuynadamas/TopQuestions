@@ -9,13 +9,13 @@ import Foundation
 import UIKit
 
 // MARK: - NetworkRequest
-protocol NetworkRequest: AnyObject {
+public protocol NetworkRequest: AnyObject {
     associatedtype ModelType
     func decode(_ data: Data) -> ModelType?
     func execute(withCompletion completion: @escaping (ModelType?) -> Void)
 }
 
-extension NetworkRequest {
+public extension NetworkRequest {
     fileprivate func load(_ url: URL, withCompletion completion: @escaping (ModelType?) -> Void) {
         let task = URLSession.shared.dataTask(with: url) { [weak self] (data, _ , _) -> Void in
             guard let data = data, let value = self?.decode(data) else {
@@ -29,7 +29,7 @@ extension NetworkRequest {
 }
 
 // MARK: - ImageRequest
-class ImageRequest {
+public class ImageRequest {
     let url: URL
     
     init(url: URL) {
@@ -38,17 +38,17 @@ class ImageRequest {
 }
 
 extension ImageRequest: NetworkRequest {
-    func decode(_ data: Data) -> UIImage? {
+    public func decode(_ data: Data) -> UIImage? {
         return UIImage(data: data)
     }
     
-    func execute(withCompletion completion: @escaping (UIImage?) -> Void) {
+    public func execute(withCompletion completion: @escaping (UIImage?) -> Void) {
         load(url, withCompletion: completion)
     }
 }
 
 // MARK: - APIRequest
-class APIRequest<Resource: APIResource> {
+public class APIRequest<Resource: APIResource> {
     let resource: Resource
     
     init(resource: Resource) {
@@ -57,26 +57,26 @@ class APIRequest<Resource: APIResource> {
 }
 
 extension APIRequest: NetworkRequest {
-    func decode(_ data: Data) -> [Resource.ModelType]? {
+    public func decode(_ data: Data) -> [Resource.ModelType]? {
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .secondsSince1970
         let wrapper = try? decoder.decode(Wrapper<Resource.ModelType>.self, from: data)
         return wrapper?.items
     }
     
-    func execute(withCompletion completion: @escaping ([Resource.ModelType]?) -> Void) {
+    public func execute(withCompletion completion: @escaping ([Resource.ModelType]?) -> Void) {
         load(resource.url, withCompletion: completion)
     }
 }
 
 // MARK: - APIResource
-protocol APIResource {
+public protocol APIResource {
     associatedtype ModelType: Decodable
     var methodPath: String { get }
     var filter: String? { get }
 }
 
-extension APIResource {
+public extension APIResource {
     var url: URL {
         var components = URLComponents(string: "https://api.stackexchange.com/2.2")!
         components.path = methodPath
@@ -95,18 +95,18 @@ extension APIResource {
 }
 
 // MARK: - QuestionsResource
-struct QuestionsResource: APIResource {
-    typealias ModelType = Question
+public struct QuestionsResource: APIResource {
+    public typealias ModelType = Question
     var id: Int?
     
-    var methodPath: String {
+    public var methodPath: String {
         guard let id = id else {
             return "/questions"
         }
         return "/questions/\(id)"
     }
     
-    var filter: String? {
+    public var filter: String? {
         id != nil ? "!9_bDDxJY5" : nil
     }
 }

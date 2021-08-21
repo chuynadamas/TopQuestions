@@ -8,16 +8,16 @@
 import Foundation
 
 // MARK: - Question
-struct Question: Identifiable {
-    let id: Int
-    let score: Int
-    let answerCount: Int
-    let viewCount: Int
-    let title: String
-    let body: String?
-    let date: Date
-    let tags: [String]
-    var owner: User?
+public struct Question: Identifiable {
+    public let id: Int
+    public let score: Int
+    public let answerCount: Int
+    public let viewCount: Int
+    public let title: String
+    public let body: String?
+    public let date: Date
+    public let tags: [String]
+    public var owner: User?
 }
 
 extension Question: Decodable {
@@ -31,6 +31,6 @@ extension Question: Decodable {
 }
 
 // MARK: - Wrapper
-struct Wrapper<T: Decodable>: Decodable {
+public struct Wrapper<T: Decodable>: Decodable {
     let items: [T]
 }

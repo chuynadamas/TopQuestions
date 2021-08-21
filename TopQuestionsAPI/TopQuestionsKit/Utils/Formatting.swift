@@ -7,7 +7,7 @@
 import Foundation
 import SwiftUI
 
-extension Int {
+public extension Int {
     var thousandsFormatting: String {
         let formatter = NumberFormatter()
         formatter.numberStyle = .decimal
@@ -23,7 +23,7 @@ extension Int {
     }
 }
 
-extension Date {
+public extension Date {
     var formatted: String {
         let formatter = DateFormatter()
         formatter.dateStyle = .medium
@@ -31,7 +31,7 @@ extension Date {
     }
 }
 
-extension Color {
+public extension Color {
     static var teal: Color {
         Color(UIColor.systemTeal)
     }

@@ -7,18 +7,18 @@
 
 import Foundation
 
-class QuestionDataModel: ObservableObject {
-    @Published var question: Question
-    @Published var isLoading = false
+public class QuestionDataModel: ObservableObject {
+    @Published public var question: Question
+    @Published public var isLoading = false
     
     private var questionRequest: APIRequest<QuestionsResource>?
     private var imageRequest: ImageRequest?
     
-    init(question: Question) {
+    public init(question: Question) {
         self.question = question
     }
     
-    func loadQuestion() {
+    public func loadQuestion() {
         guard !isLoading else { return }
         isLoading = true
         let resource = QuestionsResource(id: question.id)

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import TopQuestionsKit
 
 class QuestionCellView: UITableViewCell {
     @IBOutlet weak var questionTitleLabel: UILabel!

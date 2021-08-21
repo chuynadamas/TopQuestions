@@ -8,11 +8,11 @@ import Foundation
 import UIKit
 
 // MARK: - User
-struct User {
-    let name: String?
-    let reputation: Int?
-    let profileImageURL: URL?
-    var profileImage: UIImage?
+public struct User {
+    public let name: String?
+    public let reputation: Int?
+    public let profileImageURL: URL?
+    public var profileImage: UIImage?
 }
 
 extension User: Decodable {
