@@ -15,16 +15,6 @@
 		BE468A4726D1ABC100E0855C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE468A3126D1ABC100E0855C /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		BE7D2EBD26D1AD8000BD4EA2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BE7D2EB926D1AD8000BD4EA2 /* TopQuestionsUIKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 89F911072686609300B40A31;
-			remoteInfo = TopQuestionsUIKit;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		BE468A2F26D1ABC000E0855C /* TopQuestionsSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopQuestionsSwiftUIApp.swift; sourceTree = "<group>"; };
 		BE468A3026D1ABC000E0855C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -34,7 +24,6 @@
 		BE468A3E26D1ABC100E0855C /* TopQuestionsSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TopQuestionsSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE468A4026D1ABC100E0855C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE468A4126D1ABC100E0855C /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
-		BE7D2EB926D1AD8000BD4EA2 /* TopQuestionsUIKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TopQuestionsUIKit.xcodeproj; path = ../TopQuestionsUIKit/TopQuestionsUIKit.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +47,6 @@
 		BE468A2926D1ABC000E0855C = {
 			isa = PBXGroup;
 			children = (
-				BE7D2EB926D1AD8000BD4EA2 /* TopQuestionsUIKit.xcodeproj */,
 				BE468A2E26D1ABC000E0855C /* Shared */,
 				BE468A3826D1ABC100E0855C /* iOS */,
 				BE468A3F26D1ABC100E0855C /* macOS */,
@@ -100,14 +88,6 @@
 				BE468A4126D1ABC100E0855C /* macOS.entitlements */,
 			);
 			path = macOS;
-			sourceTree = "<group>";
-		};
-		BE7D2EBA26D1AD8000BD4EA2 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				BE7D2EBE26D1AD8000BD4EA2 /* TopQuestionsUIKit.app */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,12 +155,6 @@
 			mainGroup = BE468A2926D1ABC000E0855C;
 			productRefGroup = BE468A3726D1ABC100E0855C /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = BE7D2EBA26D1AD8000BD4EA2 /* Products */;
-					ProjectRef = BE7D2EB926D1AD8000BD4EA2 /* TopQuestionsUIKit.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				BE468A3526D1ABC100E0855C /* TopQuestionsSwiftUI (iOS) */,
@@ -188,16 +162,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		BE7D2EBE26D1AD8000BD4EA2 /* TopQuestionsUIKit.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = TopQuestionsUIKit.app;
-			remoteRef = BE7D2EBD26D1AD8000BD4EA2 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		BE468A3426D1ABC100E0855C /* Resources */ = {
