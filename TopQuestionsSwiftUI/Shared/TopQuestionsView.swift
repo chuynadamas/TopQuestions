@@ -12,14 +12,16 @@ struct TopQuestionsView: View {
     @StateObject private var dataModel = QuestionsDataModel()
     
     var body: some View {
-        List(dataModel.questions) { question in
-            NavigationLink(destination: QuestionView(question: question)) {
-                Details(question: question)
+        NavigationView {
+            List(dataModel.questions) { question in
+                NavigationLink(destination: QuestionView(question: question)) {
+                    Details(question: question)
+                }
             }
-        }
-        .navigationTitle("Top Questions")
-        .onAppear {
-            dataModel.fetchTopQuestions()
+            .navigationTitle("Top Questions")
+            .onAppear {
+                dataModel.fetchTopQuestions()
+            }
         }
     }
 }
