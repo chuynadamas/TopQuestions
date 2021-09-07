@@ -2,10 +2,10 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:TopQuestionsUIKit/TopQuestionsUIKit.xcodeproj">
+      location = "group:TopQuestionsAPI/TopQuestionsKit.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:/Users/chuynadamas/Development/TopQuestions/TopQuestionsAPI/TopQuestionsKit.xcodeproj">
+      location = "group:TopQuestionsUIKit/TopQuestionsUIKit.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:TopQuestionsSwiftUI/TopQuestionsSwiftUI.xcodeproj">
