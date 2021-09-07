@@ -9,12 +9,14 @@ import Foundation
 @testable import TopQuestionsKit
 
 struct TestData {
+    
+    static let user = User(name: "Lumir Sacharov", reputation: 2345, profileImageURL: nil)
+    
 	static var Questions: [Question] = {
-		let url = Bundle.main.url(forResource: "Questions", withExtension: "json")!
-		let data = try! Data(contentsOf: url)
-		let wrapper = try! JSONDecoder().decode(Wrapper<Question>.self, from: data)
-		return wrapper.items
+		let questions = [
+            Question(id: 0, score: 0, answerCount: 0, viewCount: 0, title: "Foo", body: nil, date: Date(), tags: [""], owner: user),
+            Question(id: 0, score: 0, answerCount: 0, viewCount: 0, title: "Foo", body: nil, date: Date(), tags: [""], owner: user)
+        ]
+        return questions
 	}()
-	
-	static let user = User(name: "Lumir Sacharov", reputation: 2345, profileImageURL: nil)
 }

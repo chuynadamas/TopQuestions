@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		BE7D2F3326D1B03700BD4EA2 /* TopQuestionsKit.h in Headers */ = {isa = PBXBuildFile; fileRef = BE7D2F3126D1B03700BD4EA2 /* TopQuestionsKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BE7D2F4926D1B26400BD4EA2 /* QuestionsDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7D2F4726D1B26400BD4EA2 /* QuestionsDataModel.swift */; };
-		BE7D2F4A26D1B26400BD4EA2 /* QuestionDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7D2F4826D1B26400BD4EA2 /* QuestionDataModel.swift */; };
 		BE7D2F4E26D1B28D00BD4EA2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7D2F4C26D1B28D00BD4EA2 /* User.swift */; };
 		BE7D2F4F26D1B28D00BD4EA2 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7D2F4D26D1B28D00BD4EA2 /* Question.swift */; };
 		BE7D2F5226D1B29A00BD4EA2 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7D2F5126D1B29A00BD4EA2 /* NetworkRequest.swift */; };
@@ -20,8 +18,6 @@
 		BE7D2F2F26D1B03700BD4EA2 /* TopQuestionsKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TopQuestionsKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE7D2F3126D1B03700BD4EA2 /* TopQuestionsKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TopQuestionsKit.h; sourceTree = "<group>"; };
 		BE7D2F3226D1B03700BD4EA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BE7D2F4726D1B26400BD4EA2 /* QuestionsDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionsDataModel.swift; sourceTree = "<group>"; };
-		BE7D2F4826D1B26400BD4EA2 /* QuestionDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionDataModel.swift; sourceTree = "<group>"; };
 		BE7D2F4C26D1B28D00BD4EA2 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		BE7D2F4D26D1B28D00BD4EA2 /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		BE7D2F5126D1B29A00BD4EA2 /* NetworkRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
@@ -61,20 +57,10 @@
 				BE7D2F5326D1B2A000BD4EA2 /* Utils */,
 				BE7D2F5026D1B29200BD4EA2 /* Network */,
 				BE7D2F4B26D1B27B00BD4EA2 /* Model */,
-				BE7D2F4626D1B25200BD4EA2 /* DataModel */,
 				BE7D2F3126D1B03700BD4EA2 /* TopQuestionsKit.h */,
 				BE7D2F3226D1B03700BD4EA2 /* Info.plist */,
 			);
 			path = TopQuestionsKit;
-			sourceTree = "<group>";
-		};
-		BE7D2F4626D1B25200BD4EA2 /* DataModel */ = {
-			isa = PBXGroup;
-			children = (
-				BE7D2F4826D1B26400BD4EA2 /* QuestionDataModel.swift */,
-				BE7D2F4726D1B26400BD4EA2 /* QuestionsDataModel.swift */,
-			);
-			path = DataModel;
 			sourceTree = "<group>";
 		};
 		BE7D2F4B26D1B27B00BD4EA2 /* Model */ = {
@@ -182,9 +168,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE7D2F5526D1B2A700BD4EA2 /* Formatting.swift in Sources */,
-				BE7D2F4926D1B26400BD4EA2 /* QuestionsDataModel.swift in Sources */,
 				BE7D2F4F26D1B28D00BD4EA2 /* Question.swift in Sources */,
-				BE7D2F4A26D1B26400BD4EA2 /* QuestionDataModel.swift in Sources */,
 				BE7D2F4E26D1B28D00BD4EA2 /* User.swift in Sources */,
 				BE7D2F5226D1B29A00BD4EA2 /* NetworkRequest.swift in Sources */,
 			);

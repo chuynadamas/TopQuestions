@@ -9,36 +9,35 @@ import SwiftUI
 import TopQuestionsKit
 
 struct QuestionView: View {
-    @StateObject private var dataModel: QuestionDataModel
+    private var question: Question
+    @State var isLoading : Bool = true
     
     init(question: Question) {
-        let dataModel = QuestionDataModel(question: question)
-        _dataModel = StateObject(wrappedValue: dataModel)
+        self.question = question
     }
     
     var body: some View {
         ScrollView(.vertical) {
             LazyVStack(alignment: .leading) {
-                Details(question: dataModel.question)
-                if dataModel.isLoading {
+                Details(question: question)
+                if isLoading {
                     ProgressView()
-                        .frame(maxWidth: .infinity, alignment: .center)
+                        .frame(maxWidth: .infinity,
+                               alignment: .center)
                 } else {
-                    if let body = dataModel.question.body {
+                    if let body = question.body {
                         Text(body)
                     }
-                    if let owner = dataModel.question.owner {
+                    if let owner = question.owner {
                         Owner(user: owner)
-                            .frame(maxWidth: .infinity, alignment: .trailing)
+                            .frame(maxWidth: .infinity,
+                                   alignment: .trailing)
                     }
                 }
             }
             .padding(.horizontal, 20.0)
         }
         .navigationTitle("Detail")
-        .onAppear {
-            dataModel.loadQuestion()
-        }
     }
 }
 

@@ -20,17 +20,3 @@ public struct Question: Identifiable {
     public var owner: User?
 }
 
-extension Question: Decodable {
-    enum CodingKeys: String, CodingKey {
-        case score, title, body, tags, owner
-        case id = "question_id"
-        case date = "creation_date"
-        case answerCount = "answer_count"
-        case viewCount = "view_count"
-    }
-}
-
-// MARK: - Wrapper
-public struct Wrapper<T: Decodable>: Decodable {
-    let items: [T]
-}

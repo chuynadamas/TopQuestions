@@ -17,33 +17,17 @@ class DetailQuestionViewController: UIViewController {
     @IBOutlet weak var questionUpLabel: UILabel!
     @IBOutlet weak var questionCommentsLabel: UILabel!
     @IBOutlet weak var questionViewsLabel: UILabel!
+    //Create missing elements
     @IBOutlet weak var questionDescriptionLabel: UILabel!
     @IBOutlet weak var questionProfileImage: UIImageView!
     @IBOutlet weak var questionAuthorLabel: UILabel!
     @IBOutlet weak var authorPointsLabel: UILabel!
     
-
-    private var subscriptions = Set<AnyCancellable>()
-    
     var question: Question?
-    var questionDataModel: QuestionDataModel?
     
     override func viewDidLoad() {
         title = "Question"
         setUp()
-        questionDataModel = QuestionDataModel(question: question!)
-        questionDataModel?.$isLoading.sink(receiveValue: { isLoading in
-            guard let questionValue = self.questionDataModel?.question,
-                  let ownerVaue = questionValue.owner,
-                  !isLoading else {
-                return
-            }
-            self.question = questionValue
-            self.questionProfileImage.image = ownerVaue.profileImage
-            self.setUp()
-        }).store(in: &subscriptions)
-        
-        questionDataModel?.loadQuestion()
     }
     
     func setUp() {
@@ -56,8 +40,6 @@ class DetailQuestionViewController: UIViewController {
         questionUpLabel.text = "🆙 \(question.score.thousandsFormatting)"
         questionCommentsLabel.text = "💬 \(question.answerCount.thousandsFormatting)"
         questionViewsLabel.text = "👀 \(question.viewCount.thousandsFormatting)"
-        questionDescriptionLabel.text = question.body
-        questionAuthorLabel.text = question.owner?.name
-        authorPointsLabel.text = "\(question.owner?.reputation?.thousandsFormatting ?? "")"
+        //Set up description view elements
     }
 }

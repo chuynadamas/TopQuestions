@@ -14,10 +14,7 @@ class TopQuestionsController: UITableViewController  {
     private let cellIdentifier = "questionCellView"
     private let segueIdentifier = "showQuestionDetail"
     
-    private var dataModel = QuestionsDataModel()
     private var questions : [Question] = []
-    
-    private var subscriptions = Set<AnyCancellable>()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,11 +25,7 @@ class TopQuestionsController: UITableViewController  {
     }
     
     func setUp() {
-        dataModel.fetchTopQuestions()
-        dataModel.$questions.sink { [weak self] value in
-            self?.questions = value
-            self?.tableView.reloadData()
-        }.store(in: &subscriptions)
+        //Prepare the controller
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

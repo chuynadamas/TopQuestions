@@ -217,52 +217,7 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qmE-Hx-JAv">
                                 <rect key="frame" x="0.0" y="273" width="414" height="589"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="50" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QYX-FH-H1M">
-                                        <rect key="frame" x="8" y="8" width="398" height="381"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="381" id="O5D-Uu-Izs"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RPX-h8-AwR">
-                                        <rect key="frame" x="168" y="399" width="71" height="71"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="71" id="39K-0t-sIR"/>
-                                            <constraint firstAttribute="width" constant="71" id="Q1a-6U-Jae"/>
-                                        </constraints>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hpj-Yl-neC">
-                                        <rect key="frame" x="249" y="399" width="149" height="20.5"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="149" id="iHc-uR-g2x"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8a4-CF-qjV">
-                                        <rect key="frame" x="249" y="429.5" width="165" height="18"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <color key="textColor" systemColor="opaqueSeparatorColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstItem="Hpj-Yl-neC" firstAttribute="leading" secondItem="RPX-h8-AwR" secondAttribute="trailing" constant="10" id="82h-pQ-cIq"/>
-                                    <constraint firstItem="8a4-CF-qjV" firstAttribute="top" secondItem="Hpj-Yl-neC" secondAttribute="bottom" constant="10" id="A8h-u0-xPy"/>
-                                    <constraint firstAttribute="trailing" secondItem="Hpj-Yl-neC" secondAttribute="trailing" constant="16" id="ARa-M3-K2R"/>
-                                    <constraint firstItem="RPX-h8-AwR" firstAttribute="top" secondItem="QYX-FH-H1M" secondAttribute="bottom" constant="10" id="F3f-fd-REc"/>
-                                    <constraint firstAttribute="trailing" secondItem="QYX-FH-H1M" secondAttribute="trailing" constant="8" id="IgV-3H-dVs"/>
-                                    <constraint firstItem="8a4-CF-qjV" firstAttribute="leading" secondItem="RPX-h8-AwR" secondAttribute="trailing" constant="10" id="XfQ-dl-P8V"/>
-                                    <constraint firstItem="Hpj-Yl-neC" firstAttribute="top" secondItem="QYX-FH-H1M" secondAttribute="bottom" constant="10" id="cUD-Gh-tX9"/>
-                                    <constraint firstItem="QYX-FH-H1M" firstAttribute="leading" secondItem="qmE-Hx-JAv" secondAttribute="leading" constant="8" id="eQK-OH-BdD"/>
-                                    <constraint firstItem="QYX-FH-H1M" firstAttribute="top" secondItem="qmE-Hx-JAv" secondAttribute="top" constant="8" id="qEm-vT-VNF"/>
-                                    <constraint firstAttribute="trailing" secondItem="8a4-CF-qjV" secondAttribute="trailing" id="uGf-RK-MKW"/>
-                                </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="AcG-jH-gFd"/>
@@ -279,11 +234,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="ybS-mA-ey8"/>
                     <connections>
-                        <outlet property="authorPointsLabel" destination="8a4-CF-qjV" id="J92-Tv-eHg"/>
-                        <outlet property="questionAuthorLabel" destination="Hpj-Yl-neC" id="ydB-Tc-OZf"/>
                         <outlet property="questionCommentsLabel" destination="IJ8-Mr-vRe" id="icw-4E-Y3G"/>
-                        <outlet property="questionDescriptionLabel" destination="QYX-FH-H1M" id="0GL-LD-3FJ"/>
-                        <outlet property="questionProfileImage" destination="RPX-h8-AwR" id="4Ec-k2-Ca7"/>
                         <outlet property="questionTagLabels" destination="F3H-Lj-x7A" id="I5b-ke-VMK"/>
                         <outlet property="questionTimeStampLabel" destination="pOq-PO-2Kf" id="dDc-Es-8Fa"/>
                         <outlet property="questionTitleLabel" destination="gxV-1b-z1F" id="cpG-yN-bqs"/>
