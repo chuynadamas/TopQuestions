@@ -9,12 +9,15 @@ import UIKit
 import Combine
 import TopQuestionsKit
 
+
 class TopQuestionsController: UITableViewController  {
     
     private let cellIdentifier = "questionCellView"
     private let segueIdentifier = "showQuestionDetail"
     
     private var questions : [Question] = []
+    
+    private let networkManager = NetworkManager.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +29,13 @@ class TopQuestionsController: UITableViewController  {
     
     func setUp() {
         //Prepare the controller
+        networkManager.fetchTopQuestions { mQuestions in
+            
+            self.questions = mQuestions
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

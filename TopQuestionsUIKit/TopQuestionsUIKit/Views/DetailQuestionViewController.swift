@@ -18,7 +18,7 @@ class DetailQuestionViewController: UIViewController {
     @IBOutlet weak var questionCommentsLabel: UILabel!
     @IBOutlet weak var questionViewsLabel: UILabel!
     //Create missing elements
-    @IBOutlet weak var questionDescriptionLabel: UILabel!
+    @IBOutlet weak var questionDescriptionLabel: UITextView!
     @IBOutlet weak var questionProfileImage: UIImageView!
     @IBOutlet weak var questionAuthorLabel: UILabel!
     @IBOutlet weak var authorPointsLabel: UILabel!
